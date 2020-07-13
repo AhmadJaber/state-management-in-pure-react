@@ -1,0 +1,39 @@
+*** State Management in Pure React
+
+-> What is this workshop about?
+   How to keep my state manageable, when it is no longer a toy application.
+   Some of trade of i have to make to solve a problem. Means by solving a problem create another problem.
+
+-> Topics
+	a. how class-based component state & hooks differ?
+	b. Explore APIs for navigating around prop drilling.
+	c. Use Reducer for advanced state management.
+	d. Write custom hooks for managing states.
+	e. Store state in local storage
+	f. Store state in URL using the query parameters.
+	g. Fetch State from a server....
+
+-> What is state?
+	The main job of react is to take the application state & turn it into dom nodes.
+	
+	Data (Model Data) -> Rules -> DOM Nodes
+	
+	When client-side application become unmamageable, it is because managing the 'state' is becoming
+	incredibly hard.
+
+-> Kinds of state....
+	
+	Model State -> The Nouns in our app. the data/things like, catalog product, individiual product, 
+	todos in a todo-list etc. Actual thing that is persisting.
+
+	View/UI state -> Are those nouns sorted in ascending or descending order? The extra info of Nouns
+	about how we view them.
+
+	Session State -> Is the user logged in/logged out/able to access in a given resource?
+
+	Communication State -> as we gonna get the 'Model Data' from API, what is the state of that data?
+	Are we loading it? / Has it loaded? / Are we updating it / Was there an error?
+
+	Location State -> Where are we on the app?
+
+
