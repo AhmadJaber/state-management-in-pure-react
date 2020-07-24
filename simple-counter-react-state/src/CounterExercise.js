@@ -12,16 +12,11 @@ class Counter extends Component {
   };
 
   increment = () => {
-    this.setState(
-      (state, props) => {
-        const { max, step } = props;
-        if (state.count >= max) return;
-        return { count: state.count + step };
-      },
-      () => {
-        this.updateDocumentTitle();
-      },
-    );
+    this.setState((state, props) => {
+      const { max, step } = props;
+      if (state.count >= max) return;
+      return { count: state.count + step };
+    }, this.updateDocumentTitle);
   };
 
   decrement = () => {

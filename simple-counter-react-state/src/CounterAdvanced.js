@@ -27,12 +27,6 @@ class Counter extends Component {
     super(props);
 
     this.state = getStateFromLocalStorage();
-
-    /*
-    this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
-    this.reset = this.reset.bind(this);
-    */
   }
 
   /*

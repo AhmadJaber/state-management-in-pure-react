@@ -77,6 +77,7 @@ class User extends Component {
 	}
 }
 ```
+
 d. I don't need to shove everything into my `render()` method.
    i can break things out in helper-methods.
 ```js
@@ -164,6 +165,11 @@ class TweetStream extends Component {
 		}
 	}
 
+	// componentWillMount() will continue to work until React v - 17
+	// Use the rename-unsafe-lifecycles codemod to automatically update your components.
+	// UNSAFE_componentWillMount() is invoked just before mounting occurs.
+	// It is called before render(), therefore calling setState() synchronously in this
+	// method will not trigger an extra rendering.
 	componentWillMount() {
 		this.tweetChecker = setInterval(() => {
 			Api.getAll('/api/tweets').then(newTweets => {
