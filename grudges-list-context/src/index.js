@@ -4,6 +4,7 @@ import Application from './Application';
 import './styles.css';
 
 import { GrudgeProvider } from './context/GrudgeContext';
+// import { GrudgeObjectProvider } from './objectdata/GrudgeObjectContext';
 
 const rootElement = document.getElementById('root');
 
