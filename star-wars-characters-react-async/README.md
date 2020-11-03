@@ -1,9 +1,5 @@
 # Star Wars Autocomplete
 
-## Course
-
-This project was built to teach the [React State](#) for Frontend Masters.
-
 ## The Basics
 
 If we wanted to fetch all of the characters, we could do something like this.
