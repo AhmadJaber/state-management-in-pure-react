@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { useThunkReducer } from './hooks/useThunkReducer';
 import { ERROR, FETCHING_COMPLETED, LOADING } from './constants/constants';
 import { fetchCharacters } from './utils/fetch';
 import CharacterList from './CharacterList';
+import CharacterView from './CharacterView';
 import './styles.scss';
 
 const reducer = (state, action) => {
@@ -61,6 +62,9 @@ const Application = () => {
             Fetch Characters
           </button>
           <CharacterList characters={characters} />
+        </section>
+        <section className="CharacterView">
+          <Route path="/characters/:id" component={CharacterView} />
         </section>
       </main>
     </div>

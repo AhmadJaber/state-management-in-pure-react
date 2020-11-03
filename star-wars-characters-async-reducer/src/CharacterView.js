@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { URL } from './endpoint';
 
-const CharacterView = ({ character = {} }) => {
+const CharacterView = ({ match }) => {
+  const [character, setCharacter] = useState({});
+
+  // if do not use dependency in this case, it will bite me later
+  useEffect(() => {
+    fetch(`${URL}/characters/${match.params.id}`)
+      .then((response) => response.json())
+      .then((data) => setCharacter(data.result[0]));
+  }, [match.params.id]);
+
   console.log(character);
-  return (
+  return Object.values(character).length ? (
     <section className="CharacterView">
       <h2>{character.name}</h2>
       <ul className="CharacterDetails">
@@ -29,6 +39,8 @@ const CharacterView = ({ character = {} }) => {
         </li>
       </ul>
     </section>
+  ) : (
+    <h4>Loading......</h4>
   );
 };
 
