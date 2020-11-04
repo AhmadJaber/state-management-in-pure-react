@@ -323,4 +323,3 @@ export default Grudge;
 #### Exercise
 
 Can you implement `NewGrudgeContainer`?
-
