@@ -18,7 +18,7 @@ const reducer = (state, action) => {
 
   if (action.type === TOGGLE_FORGIVENESS) {
     console.log(state);
-    return state.present.map((grudge) => {
+    return state.map((grudge) => {
       if (grudge.id === action.payload.id) {
         return { ...grudge, forgiven: !grudge.forgiven };
       }
