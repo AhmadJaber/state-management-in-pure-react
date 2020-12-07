@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { useLocalStorage } from './context/useLocalStorage';
+import { useLocalStorage } from './hooks/useLocalStorage';
 
 const Counter = ({ max, step }) => {
   const [count, setCount] = useLocalStorage(0, 'counter');
