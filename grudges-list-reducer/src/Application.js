@@ -28,6 +28,12 @@ const reducer = (state, action) => {
 const Application = () => {
   const [grudges, dispatch] = useReducer(reducer, initialState);
 
+  /*
+    * we r defining a new function for addGrudge & toggleForgiveness every single time
+    * so different addGrudge is passed to NewGrudge component every single render
+    * so we use useCallback(), if it gets the same dependency, it will return the same function
+    reference.
+  */
   const addGrudge = useCallback(
     ({ person, reason }) => {
       dispatch({

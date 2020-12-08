@@ -188,6 +188,9 @@ React.useEffect(() => {
 ```
 
 That's a much different result, isn't it?
+In the case of functional component, it is a unique call of the function every single time.
+So i am getting the copy of state and props every single time. I am not referencing the same
+object every single time, as happens in class base components.
 
 Could we implement the older functionality with this newer syntax?
 

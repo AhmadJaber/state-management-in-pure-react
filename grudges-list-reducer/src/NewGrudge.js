@@ -6,13 +6,13 @@ const NewGrudge = React.memo(({ onSubmit }) => {
 
   console.log('newGrudge component rendered');
 
-  const handleChange = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     onSubmit({ person, reason });
   };
 
   return (
-    <form className="NewGrudge" onSubmit={handleChange}>
+    <form className="NewGrudge" onSubmit={handleSubmit}>
       <input
         className="NewGrudge-input"
         placeholder="Person"
